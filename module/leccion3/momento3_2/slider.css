@@ -1,0 +1,148 @@
+/* Por defecto (Web) */
+.img-m {
+    display: none;
+}
+
+.img-w {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .img-m {
+        display: block;
+    }
+
+    .img-w {
+        display: none;
+    }
+}
+
+
+/*TOOLTIPS EPP*/
+img {
+    border-radius: 10px;
+}
+
+.image-epp {
+    position: relative;
+    /* Contenedor para los botones */
+    display: flex;
+    width: 65%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.image-epp.darkened_epp::after {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Debajo de los mensajes flotantes */
+}
+
+.circle-button_epp {
+    width: 150px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 16px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    transition: transform 0.3s;
+    z-index: 2;
+}
+
+.circle-button_epp:hover {
+    transform: scale(1.5);
+}
+
+.message-box_epp {
+    position: absolute;
+    background-color: white;
+    border: 2px solid var(--secondary);
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: none;
+    animation: slideInUp_epp 0.3s ease-out;
+    width: 350px;
+    padding-right: 3%;
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+@keyframes slideInUp_epp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message-box_epp .close-button_epp {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+/* Ejemplo de posiciones individuales para los botones */
+#button1_epp {
+    top: 20%;
+    left: 10%;
+}
+
+#button2_epp {
+    top: 45%;
+    left: 27%;
+}
+
+#button3_epp {
+    top: 70%;
+    left: 35%;
+}
+
+@media (max-width: 768px) {
+    .message-box_epp {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        transform: none;
+        width: calc(100% - 30px);
+        z-index: 1000;
+    }
+
+    .circle-button_epp {
+        font-size: 20px;
+    }
+
+    .image-epp {
+        width: 100%;
+    }
+}

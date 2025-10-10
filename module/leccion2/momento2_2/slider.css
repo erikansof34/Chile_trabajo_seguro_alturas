@@ -1,0 +1,448 @@
+.sf-cb-row {
+  padding: 2rem 1.3rem 2rem;
+  text-align: center;
+}
+
+/* estilos tabla */
+.table-container {
+  overflow-x: auto;
+}
+
+.wrap-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border: 2px solid #003454;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2em;
+  color: #8f8f8f;
+  background-color: #fff;
+}
+
+th {
+  background-color: #003454;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Contenedor general */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+/* Estilos de la tabla */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+}
+
+/* Encabezados */
+.responsive-table th {
+  background-color: #003454;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #003454;
+}
+
+/* Celdas */
+.responsive-table td {
+  border: 1px solid #003454;
+  padding: 8px;
+  text-align: center;
+  background-color: white;
+  color: #8f8f8f;
+}
+
+/* Alternar colores */
+.responsive-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* 🚀 En desktop (mantener una sola tabla) */
+.desktop-table {
+  display: table;
+}
+
+/* 📱 Diseño en mobile: ocultar tabla grande y mostrar 3 tablas separadas */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 0;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+
+  .desktop-table {
+    display: none;
+    /* Oculta la tabla grande */
+  }
+
+  .mobile-tables {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espaciado entre las tablas */
+  }
+
+  .responsive-table {
+    width: 100%;
+    /* Hace las tablas más pequeñas */
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 6px;
+    font-size: 12px;
+    line-height: 1.1em;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .responsive-table th {
+    font-size: 11px;
+    padding: 5px;
+  }
+}
+
+/* 🚀 En desktop (mostrar la tabla grande) */
+.desktop-table {
+  display: table;
+}
+
+/* 📱 En mobile: ocultar tabla grande y mostrar la versión para mobile */
+@media (max-width: 768px) {
+  .desktop-table {
+    display: none;
+    /* Oculta la tabla grande en mobile */
+  }
+
+  .mobile-tables {
+    display: block;
+    /* Muestra la tabla para mobile */
+    margin-bottom: 15px;
+    overflow-x: auto;
+  }
+}
+
+/* 🖥️ En desktop: ocultar tabla mobile */
+@media (min-width: 769px) {
+  .mobile-tables {
+    display: none;
+  }
+}
+
+
+/* Estilos para la actividad Drag & Drop - DESKTOP */
+.activity-container1.desktop-version {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.2;
+  background: transparent !important;
+  padding: 0 !important;
+  gap: 0.7rem !important;
+}
+
+.drop-zones1 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: row;
+}
+
+.drop-zone1 {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  min-height: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  background-color: white;
+  padding: 10px;
+}
+
+.drop-zone1.correct1 {
+  background-color: #4caf50;
+  min-height: 370px;
+  justify-content: space-between;
+}
+
+.drop-zone1.incorrect1 {
+  background-color: #f44336;
+  min-height: 370px;
+  justify-content: space-between;
+}
+
+.verification-image1 {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+  display: none;
+}
+
+.option-text1 {
+  margin: 10px;
+  box-sizing: content-box;
+  border-radius: 8px;
+  list-style-type: disc;
+  background-color: transparent;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.drop-area1 {
+  width: 100%;
+  height: 50px;
+  border: 2px dashed gray;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.drop-area1-wrapper1 {
+  width: 100%;
+}
+
+.drop-area1.drop-over1 {
+  background-color: #e6e6e6;
+}
+
+.drop-area1.drop-correct1 {
+  background-color: #90ee90;
+  border-color: #90ee90;
+  color: #0f172a;
+}
+
+.drop-area1.drop-incorrect1 {
+  background-color: #ffb6c1;
+  border-color: #ffb6c1;
+  color: #0f172a;
+}
+
+.draggable-option1 {
+  width: 190px;
+  height: 50px;
+  background-color: #c0185d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+  user-select: none;
+}
+
+.draggable-option1.dragging {
+  opacity: 0.5;
+}
+
+.remaining-options1 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.validation-message1 {
+  margin-top: 8px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+  display: none;
+}
+
+.validation-message1.success1 {
+  background-color: #4caf50;
+  color: white;
+  display: block;
+}
+
+.validation-message1.error1 {
+  background-color: #f44336;
+  color: white;
+  display: block;
+}
+
+.validation-summary1 {
+  text-align: center;
+  font-size: 16px;
+  color: #717171;
+  font-weight: bold;
+  display: none;
+}
+
+.action-buttons1 {
+  display: flex;
+  justify-content: center;
+}
+
+.paragraph-light {
+  color: #333;
+}
+
+/* Estilos para la actividad - MOBILE */
+.activity-container1.mobile-version {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.2;
+  background: transparent !important;
+  padding: 0 !important;
+  gap: 1rem !important;
+}
+
+.mobile-drop-zones1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mobile-drop-zone1 {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-drop-zone1.correct1 {
+  background-color: #4caf50;
+}
+
+.mobile-drop-zone1.incorrect1 {
+  background-color: #f44336;
+}
+
+.mobile-verification-image1 {
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  width: 54px;
+  height: 54px;
+  display: none;
+}
+
+.mobile-paragraph-light {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.mobile-drop-zone1.correct1 .mobile-paragraph-light,
+.mobile-drop-zone1.incorrect1 .mobile-paragraph-light {
+  border-color: white;
+  color: white;
+}
+
+.mobile-option-text1 {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.mobile-select1 {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+}
+
+.mobile-validation-message1 {
+  margin-top: 8px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
+  display: none;
+}
+
+.mobile-validation-message1.success1 {
+  background-color: #4caf50;
+  color: white;
+  display: block;
+}
+
+.mobile-validation-message1.error1 {
+  background-color: #f44336;
+  color: white;
+  display: block;
+}
+
+.mobile-action-buttons1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Media Queries para mostrar/ocultar versiones */
+@media (max-width: 768px) {
+  .activity-container1.desktop-version {
+    display: none;
+  }
+
+  .activity-container1.mobile-version {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .activity-container1.desktop-version {
+    display: flex;
+  }
+
+  .activity-container1.mobile-version {
+    display: none;
+  }
+}

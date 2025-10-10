@@ -1,0 +1,154 @@
+/*SLIDER 4 LECCION 3*/
+/*ventanas contenidos CON AUDIOS*/
+.container_sl19_conocer_epp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones_sl19_conocer_epp {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton_sl19_conocer_epp {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #04395e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.boton_sl19_conocer_epp:hover {
+    background-color: #6e3cd2;
+}
+
+.contenedor_sl19_conocer_epp {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.contenedor_sl19_conocer_epp h3 {
+    font-size: 18px;
+}
+
+.contenido_sl19_conocer_epp {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 52vh;
+}
+
+.contenido_sl19_conocer_epp img {
+    border-radius: 5%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-right: 5%;
+}
+
+.contenido_sl19_conocer_epp audio {
+    float: right;
+    width: 100%;
+}
+
+.contenido_sl19_conocer_epp .audio-center {
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .container_sl19_conocer_epp {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .contenido_sl19_conocer_epp img {
+        float: none;
+        width: 80%;
+        margin: auto;
+    }
+
+    .contenido_sl19_conocer_epp p {
+        margin-top: 5%;
+    }
+
+    .contenido_sl19_conocer_epp {
+        min-height: 75vh;
+    }
+}
+
+
+.container_elegir_guantes {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .container_elegir_guantes {
+        width: 100%;
+        /* Ajusta el ancho al 90% de la pantalla */
+        overflow-x: hidden;
+    }
+}
+
+.container_elegir_guantes img {
+    width: 100%;
+    height: auto;
+}
+
+.button_elegir_guantes {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #6e3cd2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tooltip_elegir_guantes {
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #6e3cd2;
+    color: #474747;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    white-space: normal;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.button_elegir_guantes:hover+.tooltip_elegir_guantes {
+    visibility: visible;
+    opacity: 1;
+}
+
+#button1-guantes {
+    top: 20%;
+    left: 20%;
+}
+
+#tooltip1-guantes {
+    top: 15%;
+    left: 25%;
+}
+
+@media (max-width: 768px) {
+    .container_elegir_guantes {
+        position: relative;
+        width: 300px;
+        max-width: 100%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,169 @@
+/*SLIDER7 LECCION 3*/
+/*TOOLTIPS*/
+
+.img {
+    box-shadow: 0 14px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.image-sld22emergencia {
+    position: relative;
+    /* Contenedor para los botones */
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0 14px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+}
+
+.image-sld22emergencia.darkened_sld22emergencia::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Debajo de los mensajes flotantes */
+}
+
+.circle-button_sld22emergencia {
+    width: 50px;
+    height: 50px;
+    background-color: #0f172a;
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    transition: transform 0.3s;
+    z-index: 2;
+}
+
+.circle-button_sld22emergencia:hover {
+    transform: scale(1.5);
+}
+
+.message-box_sld22emergencia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #04395e;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: none;
+    animation: slideInUp_sld22emergencia 0.3s ease-out;
+    width: 350px;
+    padding-right: 3%;
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes slideInUp_sld22emergencia {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message-box_sld22emergencia .close-button_sld22emergencia {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: #04395e;
+    color: #fff;
+    text-align: left;
+}
+
+
+/* Ejemplo de posiciones individuales para los botones */
+/* Posiciones para los botones */
+#button1_sld22emergencia {
+    top: 10%;
+    left: 10%;
+}
+
+#button2_sld22emergencia {
+    top: 10%;
+    left: 35%;
+}
+
+#button3_sld22emergencia {
+    top: 30%;
+    left: 40%;
+}
+
+#button4_sld22emergencia {
+    top: 55%;
+    left: 30%;
+}
+
+#button5_sld22emergencia {
+    top: 72%;
+    left: 45%;
+}
+
+#button6_sld22emergencia {
+    top: 76%;
+    left: 30%;
+}
+
+@media (max-width: 768px) {
+    .message-box_sld22emergencia {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        transform: none;
+        width: calc(100% - 80px);
+        z-index: 1000;
+    }
+
+    .circle-button_sld22emergencia {
+        font-size: 20px;
+    }
+
+    .image-sld22emergencia {
+        width: 100%;
+    }
+
+    .circle-button_sld22emergencia {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal-size-img {
+        min-width: 0 !important;
+    }
+}
+
+
+/* Nueva clase que reemplaza a modal-infografia */
+.modal-size-img {
+    min-width: 830px;
+}

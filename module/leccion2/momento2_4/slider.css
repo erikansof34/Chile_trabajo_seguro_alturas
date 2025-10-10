@@ -1,0 +1,245 @@
+/* Tooltip 01*/
+.image-container1 {
+    position: relative;
+    /* Contenedor para los botones */
+    display: flex;
+    max-width: 750px;
+    height: auto;
+    box-shadow: 0 14px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container1.darkened::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Debajo de los mensajes flotantes */
+}
+
+.circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 16px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    /* Posiciona cada botón independientemente */
+    transition: transform 0.3s;
+    /* Transición para el efecto de zoom */
+    z-index: 2;
+    /* Encima del fondo oscuro */
+}
+
+.circle-button:hover {
+    transform: scale(1.5);
+    /* Efecto de zoom */
+}
+
+.message-box {
+    position: absolute;
+    background-color: white;
+    border: 2px solid var(--secondary);
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: none;
+    animation: slideInUp 0.3s ease-out;
+    width: 270px;
+    padding-right: 1.8%;
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message-box .close-button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+/* Ejemplo de posiciones individuales para los botones */
+#button1 {
+    top: 40%;
+    left: 20%;
+}
+
+#button2 {
+    top: 35%;
+    left: 40%;
+}
+
+#button3 {
+    top: 40%;
+    left: 60%;
+}
+
+@media (max-width: 768px) {
+    .message-box {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        transform: none;
+        width: calc(100% - 80px);
+        z-index: 1000;
+    }
+
+    .circle-button {
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+}
+
+/*Tooltip 02*/
+.image-container1estado {
+    position: relative;
+    /* Contenedor para los botones */
+    display: flex;
+    max-width: 750px;
+    height: auto;
+    box-shadow: 0 14px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container1estado.darkenedestado::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Debajo de los mensajes flotantes */
+}
+
+.circle-buttonestado {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: white;
+    font-size: 16px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    transition: transform 0.3s;
+    z-index: 2;
+}
+
+.circle-buttonestado:hover {
+    transform: scale(1.5);
+}
+
+.message-boxestado {
+    position: absolute;
+    background-color: white;
+    border: 2px solid var(--secondary);
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: none;
+    animation: slideInUpestado 0.3s ease-out;
+    width: 250px;
+    padding-right: 3%;
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+@keyframes slideInUpestado {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message-boxestado .close-buttonestado {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+/* Ejemplo de posiciones individuales para los botones */
+#button1estado {
+    top: 20%;
+    left: 60%;
+}
+
+#button2estado {
+    top: 26%;
+    left: 27%;
+}
+
+#button3estado {
+    top: 57%;
+    left: 48%;
+}
+
+@media (max-width: 768px) {
+    .message-boxestado {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        transform: none;
+        width: calc(100% - 80px);
+        z-index: 1000;
+    }
+
+    .circle-buttonestado {
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+}

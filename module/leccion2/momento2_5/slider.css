@@ -1,0 +1,249 @@
+@media (min-width: 992px) {
+  .sf-ct-row {
+    padding: 0.8rem 3rem;
+  }
+}
+
+/* Por defecto (pantallas grandes) */
+.w-view {
+  display: block;
+}
+
+.m-view {
+  display: none;
+}
+
+/* En dispositivos móviles (por ejemplo, hasta 768px) */
+@media (max-width: 768px) {
+  .w-view {
+    display: none;
+  }
+
+  .m-view {
+    display: block;
+  }
+}
+
+
+/*card personal*/
+.container_conclusiones {
+  padding-top: 1.5%;
+  max-width: 95%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 5px;
+  margin: 0 auto;
+}
+
+.card_conclusiones {
+  position: relative;
+  width: 240px;
+  height: 370px;
+  margin: 0 auto;
+  background: #030c16;
+  border-radius: 15px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card_conclusiones .face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7px;
+  text-align: center;
+}
+
+.card_conclusiones .face.face1 {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.card_conclusiones .face.face1 h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.card_conclusiones .face.face1 .titulo-1 {
+  background-color: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.2em;
+  white-space: normal;
+  word-wrap: break-word;
+  margin-bottom: 2.5%;
+}
+
+.card_conclusiones .face.face1 .parrafo-1 {
+  background-color: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.2em;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.card_conclusiones .face.face2 {
+  transition: 0.5s;
+}
+
+.card_conclusiones .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  font-size: 18px;
+  text-align: center;
+}
+
+.card_conclusiones:hover .face.face2 {
+  height: 60px;
+}
+
+.card_conclusiones:hover .face.face2 h2 {
+  font-size: 10px;
+  display: none;
+}
+
+.card_conclusiones:nth-child(1) .face.face2 {
+  position: relative;
+  background-image: url(../momento2_5/img/adm_prevencion_proteccion.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card_conclusiones:nth-child(1) .face.face2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 0.936),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.card_conclusiones:nth-child(2) .face.face2 {
+  position: relative;
+  background-image: url(../momento2_5/img/profesional_calificado.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.card_conclusiones:nth-child(2) .face.face2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 0.936),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.card_conclusiones:nth-child(3) .face.face2 {
+  position: relative;
+  background-image: url(../momento2_5/img/coordinador_trabajo_alturas.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.card_conclusiones:nth-child(3) .face.face2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 0.936),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.card_conclusiones:nth-child(4) .face.face2 {
+  position: relative;
+  background-image: url(../momento2_5/img/ayudante_seguridad.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.card_conclusiones:nth-child(4) .face.face2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 0.936),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+.card_conclusiones:nth-child(5) .face.face2 {
+  position: relative;
+  background-image: url(../momento2_5/img/trabajador_autorizado.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.card_conclusiones:nth-child(5) .face.face2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,
+      rgba(0, 0, 0, 0.936),
+      rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .container_conclusiones {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 2px 0;
+  }
+
+  .card_conclusiones {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card_conclusiones .face.face2 h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .card_conclusiones .face.face1 .parrafo-1 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  .card_conclusiones .face.face1 .titulo-1 {
+    font-size: 20px;
+  }
+}

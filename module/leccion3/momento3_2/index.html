@@ -1,0 +1,108 @@
+<section class="row h-100">
+    <div class="animate__animated animate__fadeInLeftBig col-lg-5 col-md-12 sf-bg-dark sf-cl-row h-100">
+        <h1 class="sf-text-purple text-center"><span class="sf-text-white">Recordemos…<br></span> Equipos de protección
+            personal (EPP)</h1>
+        <img src="../../assets/img/avatars/avatar_mujer_mirando_de frente_con_cuaderno_fondo_azul.webp" alt="avatar"
+            class="sf-img-40 mx-auto" />
+        <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld3_2_sabiasque"><i
+                class="fa fa-question-circle"></i> ¿Sabías qué?</button>
+    </div>
+    <div class="animate__animated animate__fadeInRightBig col-lg-7 col-md-12 sf-cr-row">
+        <p class=" text-justify">
+            Tamara le cuenta a su compañero, los 3 criterios clave para una correcta de selección de EPP:
+        </p>
+        <i class="hipt hipt-light mb-2">
+            Haz clic sobre cada botón y lee la información
+            <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+        </i>
+
+        <div class="image-epp" id="imageContainer_epp">
+            <img src="./momento3_2/img/elementos_epp_horizontal.webp" alt="Matriz de riesgos" id="mainImage_epp">
+            <!-- Botones modificados (solo cambia el onclick y añade data-transcripcion) -->
+            <button class="circle-button_epp" id="button1_epp"
+                data-audio="./momento3_2/audio/tarea-m2-slide-17-audio.mp3" data-transcripcion='[
+                                                    {"start":0,"end":1,"text":"TAREA:"},
+                                                    {"start":1,"end":5,"text":"La selección de los equipos debe basarse en los riesgos identificados"},
+                                                    {"start":5,"end":9,"text":"y valorados en el Sistema de Gestión de Seguridad y Salud en el Trabajo "},
+                                                    {"start":9,"end":14,"text":"(Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST) según D. N° 44)"},
+                                                    {"start":14,"end":16,"text":"y el programa de prevención."}
+                                                    ]'
+                onclick="showAudioWithTranscription_epp(this, '<strong>Tarea</strong><br>La selección de los equipos debe basarse en los riesgos identificados y valorados en el Sistema de Gestión de Seguridad y Salud en el Trabajo -SG-SST- según D. N° 44 y el programa de prevención.', event)">
+                Tarea
+            </button>
+
+            <button class="circle-button_epp" id="button2_epp" data-audio="./momento3_2/audio/entorno-m2-slide-17.mp3"
+                data-transcripcion='[
+                                                    {"start":0,"end":1,"text":"ENTORNO:"},
+                                                    {"start":1,"end":5,"text":"Los equipos deben proteger contra riesgos asociados como"},
+                                                    {"start":5,"end":10,"text":"condiciones atmosféricas, sustancias químicas, espacios confinados,"},
+                                                    {"start":10,"end":16,"text":"riesgos de incendio, contactos eléctricos, superficies calientes, abrasivas,"},
+                                                    {"start":16,"end":18,"text":"o cualquier otro peligro identificado."}
+                                                    ]'
+                onclick="showAudioWithTranscription_epp(this, '<strong>Entorno</strong><br>Los equipos deben proteger contra riesgos asociados como condiciones atmosféricas, sustancias químicas, espacios confinados, riesgos de incendio, contactos eléctricos, superficies calientes, abrasivas, o cualquier otro peligro identificado.', event)">
+                Entorno
+            </button>
+
+            <button class="circle-button_epp" id="button3_epp"
+                data-audio="./momento3_2/audio/trabajador-m2-slide-17.mp3" data-transcripcion='[
+                                                    {"start":0,"end":1,"text":"TRABAJADOR:"},
+                                                    {"start":1,"end":5,"text":"Se deben tomar en cuenta las condiciones fisiológicas"},
+                                                    {"start":5,"end":7,"text":"del trabajador y su estado de salud,"},
+                                                    {"start":7,"end":9,"text":"garantizando su aptitud para la tarea. "}
+                                                    ]'
+                onclick="showAudioWithTranscription_epp(this, '<strong>Trabajador</strong><br>Se deben tomar en cuenta las condiciones fisiológicas del trabajador y su estado de salud, garantizando su aptitud para la tarea.', event)">
+                Trabajador
+            </button>
+
+        </div>
+
+        <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld3_2_requerimientos_minimos"><i
+                class="fa fa-question-circle"></i> Requerimientos mínimos</button>
+
+    </div>
+
+
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="sld2_3_sabiasque" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-question-circle"></i> ¿Sabías qué?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img src="./momento3_2/img/info_epp.webp" alt="" class="mx-auto img-w">
+                    <img src="./momento3_2/img/info_epp.webp" alt="" class="img-m">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="sld3_2_requerimientos_minimos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-question-circle"></i> ¿Sabías qué?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <img src="../../assets/img/botones/sabias_que_icono.webp" alt="" class="sf-img-30 mx-auto">
+                <p class="text-justify">Los arneses se inventaron para la aviación: Aunque hoy en día son esenciales
+                    para el trabajo en alturas, los arneses de
+                    seguridad modernos fueron desarrollados originalmente para pilotos y paracaidistas durante la
+                    Primera Guerra Mundial.
+                    Solo décadas después se adaptaron para la construcción y otros trabajos en altura.</p>
+
+            </div>
+        </div>
+    </div>
+</div>

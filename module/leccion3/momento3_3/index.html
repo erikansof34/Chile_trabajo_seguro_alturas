@@ -1,0 +1,157 @@
+<section class="row h-100">
+    <div class="animate__animated animate__fadeInLeftBig col-lg-5 col-md-12 sf-bg-dark sf-cl-row h-100">
+        <h1 class="sf-text-purple text-center"><span class="sf-text-white">Recordemos…<br></span> Equipos de protección
+            personal (EPP)</h1>
+        <p class="sf-text-white text-justify">
+            Tatiana te invita a conocer los EPP más comunes en el trabajo en Alturas:
+        </p>
+        <img src="../../assets/img/avatars/avatar_mujer_mirando_de frente_con_cuaderno_fondo_azul.webp" alt="avatar"
+            class="sf-img-40 mx-auto" />
+        <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld3_3_sabiasque"><i
+                class="fa fa-question-circle"></i> ¿Sabías qué?</button>
+    </div>
+    <div class="animate__animated animate__fadeInRightBig col-lg-7 col-md-12 sf-cr-row mb-5 h-100">
+        <i class="hipt hipt-light my-2">
+            Presiona cada boton para descubrir su contenido
+            <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+        </i>
+        <div class="equipos-epp">
+            <div class="buttons_equipos_epp">
+                <button id="boton1_equipos_epp" onclick="showContentEquiposEpp(1)" class="active_equipos_epp">
+                    Arnés
+                </button>
+                <button id="boton2_equipos_epp" onclick="showContentEquiposEpp(2)">
+                    Línea de vida
+                </button>
+                <button id="boton3_equipos_epp" onclick="showContentEquiposEpp(3)">
+                    Casco
+                </button>
+                <button id="boton4_equipos_epp" onclick="showContentEquiposEpp(4)">
+                    Bandola<br>(mosquetón)
+                </button>
+                <button id="boton5_equipos_epp" onclick="showContentEquiposEpp(5)">
+                    Barbuquejo
+                </button>
+            </div>
+
+            <!-- Contenido para el arnés -->
+            <div id="contenido1_equipos_epp" class="content_equipos_epp active_equipos_epp">
+                <div class="buttons-switch">
+                    <button onclick="changeContent(1, 'correcto')" class="active-switch">Uso
+                        Correcto</button>
+                    <button onclick="changeContent(1, 'contraindicaciones')">Contraindicaciones</button>
+                </div>
+                <div class="preview-container-equipos_epp">
+                    <img id="img1" src="./momento3_3/img/arnes_correcto.webp" alt="Uso Correcto">
+                    <p id="texto1">
+                        El arnés de cuerpo completo debe ajustarse correctamente a la complexión
+                        del trabajador, asegurando que las correas de hombros, piernas y cintura
+                        estén ceñidas, pero no al punto de incomodar. La anilla dorsal, donde se
+                        conecta la línea de vida, debe estar ubicada entre los omóplatos para
+                        distribuir la fuerza en caso de una caída. Antes de cada uso, se debe
+                        inspeccionar el arnés para identificar posibles desgastes o daños.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contenido para la línea de vida -->
+            <div id="contenido2_equipos_epp" class="content_equipos_epp">
+                <div class="buttons-switch">
+                    <button onclick="changeContent(2, 'correcto')" class="active-switch">Uso
+                        Correcto</button>
+                    <button onclick="changeContent(2, 'contraindicaciones')">Contraindicaciones</button>
+                </div>
+                <div class="preview-container-equipos_epp">
+                    <img id="img2" src="./momento3_3/img/linea_vida_correcto.webp" alt="Uso Correcto">
+                    <p id="texto2">
+                        La línea de vida debe estar bien asegurada a un anclaje certificado que
+                        soporte el peso y la fuerza de una caída. Debe tener la longitud
+                        adecuada para permitir movimiento, sin interferir con el trabajo, y
+                        estar conectada al anillo dorsal del arnés. La línea de vida puede ser
+                        fija o retráctil, según la tarea y el entorno.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contenido para el casco -->
+            <div id="contenido3_equipos_epp" class="content_equipos_epp">
+                <div class="buttons-switch">
+                    <button onclick="changeContent(3, 'correcto')" class="active-switch">Uso
+                        Correcto</button>
+                    <button onclick="changeContent(3, 'contraindicaciones')">Contraindicaciones</button>
+                </div>
+                <div class="preview-container-equipos_epp">
+                    <img id="img3" src="./momento3_3/img/casco_correcto.webp" alt="Uso Correcto">
+                    <p id="texto3">El casco debe ajustarse correctamente a la cabeza y debe
+                        incluir una suspensión interna que absorba impactos. Se debe usar
+                        siempre con barbuquejo para evitar que se caiga mientras se trabaja en
+                        altura. Además, el casco debe revisarse antes de cada uso para
+                        asegurarse de que no tenga fisuras o daños.</p>
+                </div>
+            </div>
+
+            <!-- Contenido para la bandola -->
+            <div id="contenido4_equipos_epp" class="content_equipos_epp">
+                <div class="buttons-switch">
+                    <button onclick="changeContent(4, 'correcto')" class="active-switch">Uso
+                        Correcto</button>
+                    <button onclick="changeContent(4, 'contraindicaciones')">Contraindicaciones</button>
+                </div>
+                <div class="preview-container-equipos_epp">
+                    <img id="img4" src="./momento3_3/img/bandola_correcto.webp" alt="Uso Correcto">
+                    <p id="texto4">La bandola o mosquetón debe estar correctamente conectada
+                        tanto al arnés como a la línea de vida o anclaje. Se debe cerrar
+                        completamente y verificar que el cierre esté funcionando antes de
+                        usarla. Idealmente, los mosquetones deben ser de bloqueo automático para
+                        mayor seguridad.</p>
+                </div>
+            </div>
+
+            <!-- Contenido para el barbuquejo -->
+            <div id="contenido5_equipos_epp" class="content_equipos_epp">
+                <div class="buttons-switch">
+                    <button onclick="changeContent(5, 'correcto')" class="active-switch">Uso
+                        Correcto</button>
+                    <button onclick="changeContent(5, 'contraindicaciones')">Contraindicaciones</button>
+                </div>
+                <div class="preview-container-equipos_epp">
+                    <img id="img5" src="./momento3_3/img/barbuquejo_correcto.webp" alt="Uso Correcto">
+                    <p id="texto5">El barbuquejo, una correa que se ajusta alrededor del mentón,
+                        debe mantenerse firmemente colocado para evitar que el casco se
+                        desprenda. Es esencial en trabajos en altura para que el casco
+                        permanezca en su lugar independientemente de los movimientos o el
+                        viento.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="sld3_3_sabiasque" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered sf-modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-question-circle"></i> ¿Sabías qué?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <img src="../../assets/img/botones/sabias_que_icono.webp" alt="" class="sf-img-30 mx-auto">
+                <p class="text-justify">El síndrome del arnés es un riesgo real: Permanecer suspendido en un arnés sin
+                    poder moverse durante un período
+                    prolongado puede provocar lo que se llama el “síndrome del arnés”. Este efecto ocurre cuando la
+                    sangre se acumula en las
+                    piernas, causando mareos y pérdida de conciencia. Por eso, los protocolos de rescate rápido son
+                    fundamentales en
+                    trabajos en altura.</p>
+
+            </div>
+        </div>
+    </div>
+</div>

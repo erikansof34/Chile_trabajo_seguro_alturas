@@ -1,0 +1,154 @@
+<section class="row h-100">
+  <!-- Columna izquierda -->
+  <div class="animate__animated animate__fadeInLeftBig sf-bg-dark col-lg-6 col-md-12 sf-cl-row">
+    <h1 class="fw-bold text-center text-white">Antes de comenzar... <br> <span
+        class="sf-text-purple">Reflexionemos...</span>
+    </h1>
+    <i class="hipt hipt-light my-4">
+      Lee esta situación y concluye: ¿Realmente vale la pena, hacer una tarea de trabajo en alturas sin seguir los
+      procedimientos de seguridad…?
+      <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+    </i>
+    <p class="text-justify mx-lg-4 text-white">
+      Tatiana necesita aplicar soldadura en una estructura de techo, llegó tarde al trabajo, y su jefe necesita que
+      termine
+      esto con urgencia. Tamara decide comenzar a trabajar sin tener el debido permiso de trabajo en alturas, ni
+      realizar el
+      Análisis de Trabajo Seguro (ATS).
+    </p>
+    <i class="hipt hipt-light my-4">
+      Haz clic para realizar la actividad
+      <i class="icon-inline icon-inline--start fa-solid fa-arrow-turn-down"></i>
+    </i>
+    <button class="sf-btn sf-btn-purple track-element" data-bs-toggle="modal" data-bs-target="#sld1_modal"
+      id="btnactividad1">
+      <i class="fa-solid fa-book"></i> Actividad
+    </button>
+
+  </div>
+
+  <!-- Columna derecha  -->
+  <div class="animate__animated animate__fadeInRightBig col-lg-6 col-md-12 sf-cr-row position-relative">
+    <div class="mostrar-web w-100 h-100 position-absolute top-0 start-0">
+      <video autoplay loop muted playsinline id="fondo-video-alturas" class="w-100 h-100 object-fit-cover">
+        <source src="./momento1_2/video/trabajo_alturas.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="mostrar-mobile w-100 h-100 position-absolute top-0 start-0">
+      <video autoplay loop muted playsinline id="fondo-video-alturas-mobile" class="w-100 h-100 object-fit-cover">
+        <source src="./momento1_2/video/trabajo_alturas.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="position-relative z-1">
+      <button class="sf-btn sf-btn-purple" data-bs-toggle="modal" data-bs-target="#sld4_bienestar">
+        <i class="fa fa-question-circle"></i> Pregunta
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="sld4_bienestar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Pregunta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+            class="fa fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <img src="../../assets/img/botones/pregunta_icono.webp" alt="" class="sf-img-30 mx-auto">
+        <p class="text-justify">¿Consideras que esta situación podría ocurrirte en tu trabajo, o te ha ocurrido?</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Actividad -->
+<div class="modal fade" id="sld1_modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lgancho">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fa-solid fa-book"></i> Actividad: Tatiana lo ve, y sabe que es riesgoso… ¿Qué
+          crees que Tamara debe hacer?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mx-lg-0 " id="preguntas-container">
+          <div>
+            <div id="contador-preguntas" class="mb-2 text-center">
+              <p id="progress-text">0 de 1 pregunta validada</p>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <!-- Contenedor de preguntas -->
+          <!-- Pregunta única -->
+          <div class="preguntas_01" data-pregunta="1">
+            <div class="ctItem fixed-size-question-box">
+              <p class="text-paragraph-light-color text-p-size text-left" style="font-family: Montserrat, sans-serif;">
+                <strong>¿Qué debe hacer Tamara?</strong>
+              </p>
+              <div class="opciones-pregunta">
+                <p class="opcion-respuesta" data-letra="a">a. Ayudarle a subir a la estructura para que empiece rápido
+                </p>
+                <p class="opcion-respuesta" data-letra="b">b. Detener la labor, y recordarle que una tarea de alto
+                  riesgo requiere ATS y permiso de trabajo</p>
+                <p class="opcion-respuesta" data-letra="c">c. Pasar de largo y no decir nada para que no regañen a Su
+                  compañero</p>
+              </div>
+
+              <!-- Botón Validar -->
+              <div class="d-flex justify-center">
+                <button class="sf-btn sf-btn-purple btn-validar" data-pregunta="1">
+                  <i class="fas fa-check-circle"></i> Validar
+                </button>
+              </div>
+
+
+            </div>
+
+            <!-- Feedback para pregunta 1 -->
+            <div class="d-flex justify-content-center">
+              <div id="mensaje_error_1" class="mt-3 d-none"></div>
+              <div id="resultado_alertas_1" class="mt-3 d-none"></div>
+            </div>
+          </div>
+
+          <!-- Navegación externa para cuando el quiz esté completado -->
+          <div id="navegacion-resumen" class="d-none">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <button id="btnAnteriorNav" class="sf-btn sf-btn-outline-purple">
+                <i class="fa-solid fa-chevron-left"></i> Anterior
+              </button>
+              <span class="quiz-counter">
+                <span id="preguntaActualNav">1</span> de <span id="totalPreguntasNav">1</span>
+              </span>
+              <button id="btnSiguienteNav" class="sf-btn sf-btn-outline-purple">
+                Siguiente <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="text-center">
+              <button class="btn sf-btn sf-btn-purple btn-reiniciar">
+                <i class="fas fa-redo me-2"></i>Reiniciar
+              </button>
+            </div>
+          </div>
+
+          <!-- Feedback final externo -->
+          <div id="feedback-final-externo" class="d-none">
+          </div>
+
+          <!-- Div para resultado final -->
+          <div id="resultado_final" class="d-none"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
