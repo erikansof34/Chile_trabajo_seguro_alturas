@@ -1,4 +1,5 @@
 // widget.js
+
 (function () {
     // Variables de estado para los botones toggle
     var isSaturationOn = false;
